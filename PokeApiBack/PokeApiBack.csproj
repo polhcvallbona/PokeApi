@@ -43,10 +43,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="eee.cs" />
+    <Compile Include="NewFolder1\MisHuevosEnTuCara.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
