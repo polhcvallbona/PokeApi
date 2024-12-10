@@ -1,0 +1,6 @@
+C:\projectes\PokeApi\PokeApi\PokeApiBack\bin\Debug\PokeApiBack.dll
+C:\projectes\PokeApi\PokeApi\PokeApiBack\bin\Debug\PokeApiBack.pdb
+C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.csproj.AssemblyReference.cache
+C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.csproj.CoreCompileInputs.cache
+C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.dll
+C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.pdb

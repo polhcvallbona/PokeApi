@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokeApiFront.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace PokeApiFront
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            new FrontController();
+            Application.Run();
         }
     }
 }

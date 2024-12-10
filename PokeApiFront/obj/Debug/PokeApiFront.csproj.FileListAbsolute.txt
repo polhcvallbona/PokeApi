@@ -1,0 +1,10 @@
+C:\projectes\PokeApi\PokeApi\PokeApiFront\bin\Debug\PokeApiFront.exe.config
+C:\projectes\PokeApi\PokeApi\PokeApiFront\bin\Debug\PokeApiFront.exe
+C:\projectes\PokeApi\PokeApi\PokeApiFront\bin\Debug\PokeApiFront.pdb
+C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.csproj.AssemblyReference.cache
+C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.WelcomeForm.resources
+C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.Properties.Resources.resources
+C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.csproj.GenerateResource.cache
+C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.csproj.CoreCompileInputs.cache
+C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.exe
+C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.pdb
