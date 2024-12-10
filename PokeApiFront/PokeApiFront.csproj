@@ -87,19 +87,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="images\eevee-wallpaper.jpg" />
     <Content Include="images\png_entrar.png" />
     <Content Include="images\pokeapi_logo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-=======
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\PokeApiBack\PokeApiBack.csproj">
       <Project>{7bcf5344-c14f-4e7e-8c5e-484287932bd2}</Project>
       <Name>PokeApiBack</Name>
     </ProjectReference>
->>>>>>> origin/main
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

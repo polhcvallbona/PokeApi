@@ -25,3 +25,4 @@ C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFr
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\Newtonsoft.Json.dll
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\Newtonsoft.Json.xml
 >>>>>>> origin/main
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.WelcomeForm.resources
