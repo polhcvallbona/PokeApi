@@ -1,28 +1,15 @@
-<<<<<<< HEAD
-C:\projectes\PokeApi\PokeApi\PokeApiFront\bin\Debug\PokeApiFront.exe.config
-C:\projectes\PokeApi\PokeApi\PokeApiFront\bin\Debug\PokeApiFront.exe
-C:\projectes\PokeApi\PokeApi\PokeApiFront\bin\Debug\PokeApiFront.pdb
-C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.csproj.AssemblyReference.cache
-C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.WelcomeForm.resources
-C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.Properties.Resources.resources
-C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.csproj.GenerateResource.cache
-C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.csproj.CoreCompileInputs.cache
-C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.exe
-C:\projectes\PokeApi\PokeApi\PokeApiFront\obj\Debug\PokeApiFront.pdb
-=======
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\PokeApiFront.exe.config
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\PokeApiFront.exe
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\PokeApiFront.pdb
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\PokeApiBack.dll
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\Newtonsoft.Json.dll
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\PokeApiBack.pdb
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\Newtonsoft.Json.xml
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.csproj.AssemblyReference.cache
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.WelcomeForm.resources
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.Properties.Resources.resources
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.csproj.GenerateResource.cache
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.csproj.CoreCompileInputs.cache
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiF.1E8138CF.Up2Date
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.exe
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.pdb
-C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\Newtonsoft.Json.dll
-C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\bin\Debug\Newtonsoft.Json.xml
->>>>>>> origin/main
-C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiFront\obj\Debug\PokeApiFront.WelcomeForm.resources

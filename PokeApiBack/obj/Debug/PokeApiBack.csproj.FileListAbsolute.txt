@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-C:\projectes\PokeApi\PokeApi\PokeApiBack\bin\Debug\PokeApiBack.dll
-C:\projectes\PokeApi\PokeApi\PokeApiBack\bin\Debug\PokeApiBack.pdb
-C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.csproj.AssemblyReference.cache
-C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.csproj.CoreCompileInputs.cache
-C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.dll
-C:\projectes\PokeApi\PokeApi\PokeApiBack\obj\Debug\PokeApiBack.pdb
-=======
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\bin\Debug\PokeApiBack.dll
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\bin\Debug\PokeApiBack.pdb
-C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.csproj.AssemblyReference.cache
-C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.csproj.CoreCompileInputs.cache
-C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.dll
-C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.pdb
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\bin\Debug\Newtonsoft.Json.dll
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.csproj.AssemblyReference.cache
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.csproj.CoreCompileInputs.cache
 C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiB.2ECA4FE2.Up2Date
->>>>>>> origin/main
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.dll
+C:\Users\cv\Desktop\Exercisis\ApiPokemonProject\PokeApiBack\obj\Debug\PokeApiBack.pdb

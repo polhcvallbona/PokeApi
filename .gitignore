@@ -4,6 +4,6 @@
 .vs/
 PokeApiFront/obj/
 PokeApiFront/bin/
-PokeApiBack/obj/**
-PokeApiBack/bin/**
+PokeApiBack/obj/
+PokeApiBack/bin/
 packages/
