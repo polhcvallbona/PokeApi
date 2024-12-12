@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using PokeApiBack.Models;
+using PokeApiBack.Models.PokeApi;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,10 +18,10 @@ namespace PokeApiBack.Repositories
         {
             public List<Pokemon> data { get; set; }
         }
-        public static async Task<RootObject> /*List<Pokemon>*/ GetAllPokemonsByName(string pokemonName)
+        public static async Task<RootObject> GetAllPokemonsByName(string pokemonName)
         {
             HttpClient httpClient = new HttpClient();
-            var res = await httpClient.GetAsync("https://api.pokemontcg.io/v2/cards?q=name:gardevoir");
+            var res = await httpClient.GetAsync($"https://api.pokemontcg.io/v2/cards?q=name:{pokemonName}");
             
             string jsonString = await res.Content.ReadAsStringAsync();
 
@@ -35,6 +36,25 @@ namespace PokeApiBack.Repositories
 
                 // Mostrar resultados
                 return ss;
+            }
+        }
+
+        public static async Task<List<PokeapiResults>> GetAllPokemonNames()
+        {
+            HttpClient httpClient = new HttpClient();
+            var res = await httpClient.GetAsync("https://pokeapi.co/api/v2/pokemon/?limit=1302");
+
+            string jsonString = await res.Content.ReadAsStringAsync();
+
+            JsonSerializer jsonSerializer = new JsonSerializer();
+
+            using (var stringReader = new StringReader(jsonString))
+            using (var jsonReader = new JsonTextReader(stringReader))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                PokeApiRootObj ss = serializer.Deserialize<PokeApiRootObj>(jsonReader);
+
+                return ss.results;
             }
         }
 
