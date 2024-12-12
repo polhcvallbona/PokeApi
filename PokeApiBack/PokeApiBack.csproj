@@ -44,13 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Holofoil.cs" />
-    <Compile Include="Models\Images.cs" />
-    <Compile Include="Models\Pokemon.cs" />
-    <Compile Include="Models\Prices.cs" />
-    <Compile Include="Models\Set.cs" />
-    <Compile Include="Models\TcgPlayer.cs" />
-    <Compile Include="Models\Weakness.cs" />
+    <Compile Include="Models\PokeApi\PokeapiResults.cs" />
+    <Compile Include="Models\PokeApi\PokeApiRootObj.cs" />
+    <Compile Include="Models\PokemonTCG\Holofoil.cs" />
+    <Compile Include="Models\PokemonTCG\Images.cs" />
+    <Compile Include="Models\PokemonTCG\Pokemon.cs" />
+    <Compile Include="Models\PokemonTCG\Prices.cs" />
+    <Compile Include="Models\PokemonTCG\Set.cs" />
+    <Compile Include="Models\PokemonTCG\TcgPlayer.cs" />
+    <Compile Include="Models\PokemonTCG\Weakness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\PokemonRepository.cs" />
   </ItemGroup>
