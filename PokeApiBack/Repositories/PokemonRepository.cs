@@ -21,41 +21,31 @@ namespace PokeApiBack.Repositories
         public static async Task<RootObject> GetAllPokemonsByName(string pokemonName)
         {
             HttpClient httpClient = new HttpClient();
-            var res = await httpClient.GetAsync($"https://api.pokemontcg.io/v2/cards?q=name:{pokemonName}");
+            var requestResult = await httpClient.GetAsync($"https://api.pokemontcg.io/v2/cards?q=name:{pokemonName}");
             
-            string jsonString = await res.Content.ReadAsStringAsync();
+            string jsonString = await requestResult.Content.ReadAsStringAsync();
 
-            JsonSerializer jsonSerializer = new JsonSerializer();
-
-            using (var stringReader = new StringReader(jsonString))
-            using (var jsonReader = new JsonTextReader(stringReader))
-            {
-                // Deserializar al objeto Pokemon
-                JsonSerializer serializer = new JsonSerializer();
-                RootObject ss = serializer.Deserialize<RootObject>(jsonReader);
-
-                // Mostrar resultados
-                return ss;
-            }
+            RootObject res = (RootObject)DeserializeObject(typeof(RootObject), jsonString);
+            
+            return res;
         }
 
-        public static async Task<List<PokeapiResults>> GetAllPokemonNames()
+        public static async Task<List<string>> GetAllPokemonNames()
         {
             HttpClient httpClient = new HttpClient();
-            var res = await httpClient.GetAsync("https://pokeapi.co/api/v2/pokemon/?limit=1302");
+            var requestResult = await httpClient.GetAsync("https://pokeapi.co/api/v2/pokemon/?limit=1302");
 
-            string jsonString = await res.Content.ReadAsStringAsync();
+            string jsonString = await requestResult.Content.ReadAsStringAsync();
 
-            JsonSerializer jsonSerializer = new JsonSerializer();
+            PokeApiRootObj res = (PokeApiRootObj)DeserializeObject(typeof(PokeApiRootObj), jsonString);
 
-            using (var stringReader = new StringReader(jsonString))
-            using (var jsonReader = new JsonTextReader(stringReader))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                PokeApiRootObj ss = serializer.Deserialize<PokeApiRootObj>(jsonReader);
+            return res.results.Select(x => x.name).Where(x => !x.Contains("-")).OrderBy(x => x).ToList();
+        } 
 
-                return ss.results;
-            }
+        public static object DeserializeObject(Type type, string jsonString)
+        {
+            var res = JsonConvert.DeserializeObject(jsonString, type);
+            return res;
         }
 
     }
