@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbPokemonCard2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbPokemonCard1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPokemonCard1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +82,7 @@
             // cbPokemonCard1
             // 
             this.cbPokemonCard1.FormattingEnabled = true;
-            this.cbPokemonCard1.Location = new System.Drawing.Point(147, 104);
+            this.cbPokemonCard1.Location = new System.Drawing.Point(147, 64);
             this.cbPokemonCard1.Name = "cbPokemonCard1";
             this.cbPokemonCard1.Size = new System.Drawing.Size(121, 21);
             this.cbPokemonCard1.TabIndex = 5;
@@ -89,7 +91,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(31, 107);
+            this.label3.Location = new System.Drawing.Point(31, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 13);
             this.label3.TabIndex = 4;
@@ -115,6 +117,15 @@
             this.label4.Text = "Cartas del Pokemon:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbPokemonCard1
+            // 
+            this.pbPokemonCard1.BackColor = System.Drawing.Color.Transparent;
+            this.pbPokemonCard1.Location = new System.Drawing.Point(28, 104);
+            this.pbPokemonCard1.Name = "pbPokemonCard1";
+            this.pbPokemonCard1.Size = new System.Drawing.Size(266, 345);
+            this.pbPokemonCard1.TabIndex = 8;
+            this.pbPokemonCard1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +133,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbPokemonCard1);
             this.Controls.Add(this.cbPokemonCard2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbPokemonCard1);
@@ -132,6 +144,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pbPokemonCard1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +160,6 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.ComboBox cbPokemonCard2;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.PictureBox pbPokemonCard1;
     }
 }

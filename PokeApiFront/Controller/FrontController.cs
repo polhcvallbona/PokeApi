@@ -1,13 +1,17 @@
-﻿using PokeApiBack.Repositories;
+﻿using PokeApiBack.Models;
+using PokeApiBack.Repositories;
 using PokeApiFront.View;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PokeApiFront.Model
+namespace PokeApiFront.Controller
 {
     public class FrontController
     {
@@ -38,15 +42,13 @@ namespace PokeApiFront.Model
             if (mainForm.cbPokemonName1.Text != "" && mainForm.cbPokemonName1.Text != null)
             {
                 var result = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName1.Text);
-                //mainForm.cbPokemonCard1.DataSource = result;
+                mainForm.cbPokemonCard1.DataSource = result;
+                string imageUrl = result[0].images.small;
+                mainForm.pbPokemonCard1.ImageLocation = imageUrl;
             }
         }
 
         private async void CbPokemonName2_SelectedIndexChanged(object sender, EventArgs e)
-            await GetPokemonNameCard1();
-        }
-
-        private async Task GetPokemonNameCard1()
         {
             await GetPokemonCard2();
         }
@@ -56,19 +58,7 @@ namespace PokeApiFront.Model
             if (mainForm.cbPokemonName2.Text != "" && mainForm.cbPokemonName2.Text != null)
             {
                 var result = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName2.Text);
-            }
-        }
-
-        private async void CbPokemonName2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            await GetPokemonNameCard2();
-        }
-
-        private async Task GetPokemonNameCard2()
-        {
-            if (mainForm.cbPokemonName2.Text != "" && mainForm.cbPokemonName2.Text != null)
-            {
-                mainForm.cbPokemonCard2.DataSource = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName2.Text);
+                mainForm.cbPokemonCard2.DataSource = result;
             }
         }
 
@@ -79,11 +69,10 @@ namespace PokeApiFront.Model
             welcomeForm.Close();
         }
 
-        private async Task LoadData()
+        private async void LoadData()
         {
             mainForm.cbPokemonName1.DataSource = await PokemonRepository.GetAllPokemonNames();
             mainForm.cbPokemonName2.DataSource = await PokemonRepository.GetAllPokemonNames();
         }
-
     }
 }

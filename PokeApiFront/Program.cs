@@ -1,4 +1,4 @@
-﻿using PokeApiFront.Model;
+﻿using PokeApiFront.Controller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
