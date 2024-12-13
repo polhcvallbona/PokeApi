@@ -18,7 +18,7 @@ namespace PokeApiBack.Repositories
         {
             public List<Pokemon> data { get; set; }
         }
-        public static async Task<RootObject> GetAllPokemonsByName(string pokemonName)
+        public static async Task<List<Pokemon>> GetAllPokemonsByName(string pokemonName)
         {
             HttpClient httpClient = new HttpClient();
             var requestResult = await httpClient.GetAsync($"https://api.pokemontcg.io/v2/cards?q=name:{pokemonName}");
@@ -27,7 +27,7 @@ namespace PokeApiBack.Repositories
 
             RootObject res = (RootObject)DeserializeObject(typeof(RootObject), jsonString);
             
-            return res;
+            return res.data;
         }
 
         public static async Task<List<string>> GetAllPokemonNames()
