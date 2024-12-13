@@ -2,8 +2,6 @@
 .vs/**
 .vs
 .vs/
-PokeApiFront/obj/
-PokeApiFront/bin/
-PokeApiBack/obj/
-PokeApiBack/bin/
+**/obj/
+**/bin/
 packages/
