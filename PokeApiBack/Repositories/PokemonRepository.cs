@@ -39,7 +39,7 @@ namespace PokeApiBack.Repositories
             }
         }
 
-        public static async Task<List<PokeapiResults>> GetAllPokemonNames()
+        public static async Task<List<string>> GetAllPokemonNames()
         {
             HttpClient httpClient = new HttpClient();
             var res = await httpClient.GetAsync("https://pokeapi.co/api/v2/pokemon/?limit=1302");
@@ -54,9 +54,11 @@ namespace PokeApiBack.Repositories
                 JsonSerializer serializer = new JsonSerializer();
                 PokeApiRootObj ss = serializer.Deserialize<PokeApiRootObj>(jsonReader);
 
-                return ss.results;
+                return ss.results.Where(x => !x.name.Contains("-")).Select(x => x.name).ToList();
             }
-        }
+        } 
+
+        //public static async Task<object>
 
     }
 }
