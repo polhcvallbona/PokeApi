@@ -30,14 +30,32 @@ namespace PokeApiFront.Model
 
         private async void CbPokemonName1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            await GetPokemonCard1();
+        }
+
+        private async Task GetPokemonCard1()
+        {
+            if (mainForm.cbPokemonName1.Text != "" && mainForm.cbPokemonName1.Text != null)
+            {
+                var result = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName1.Text);
+                //mainForm.cbPokemonCard1.DataSource = result;
+            }
+        }
+
+        private async void CbPokemonName2_SelectedIndexChanged(object sender, EventArgs e)
             await GetPokemonNameCard1();
         }
 
         private async Task GetPokemonNameCard1()
         {
-            if (mainForm.cbPokemonName1.Text != "" && mainForm.cbPokemonName1.Text != null)
+            await GetPokemonCard2();
+        }
+
+        private async Task GetPokemonCard2()
+        {
+            if (mainForm.cbPokemonName2.Text != "" && mainForm.cbPokemonName2.Text != null)
             {
-                mainForm.cbPokemonCard1.DataSource = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName1.Text);
+                var result = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName2.Text);
             }
         }
 
