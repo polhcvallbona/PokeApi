@@ -21,5 +21,10 @@ namespace PokeApiBack.Models
         public Images images { get; set; }
         //public List<TcgPlayer> tcgPlayer { get; set; }
 
+        public override string ToString()
+        {
+            return name + set.series;
+        }
+
     }
 }
