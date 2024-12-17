@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PokeApiBack.Services
 {
-    internal static class PokemonServices
+    public static class PokemonServices
     {
         public static int ComparePokemonTypes(Pokemon pokemon1, Pokemon pokemon2)
         {
