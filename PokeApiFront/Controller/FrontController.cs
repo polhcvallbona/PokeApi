@@ -1,5 +1,6 @@
 ﻿using PokeApiBack.Models;
 using PokeApiBack.Repositories;
+using PokeApiBack.Services;
 using PokeApiFront.View;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PokeApiFront.Controller
 {
     public class FrontController
@@ -20,6 +22,7 @@ namespace PokeApiFront.Controller
 
         public FrontController()
         {
+
             SetListeners();
             LoadData();
             welcomeForm.Show();
@@ -49,13 +52,31 @@ namespace PokeApiFront.Controller
         {
             if (mainForm.cbPokemonName1 != null && mainForm.cbPokemonName2 != null)
             {
-                //int pokemonMasFuerte = PokemonServices.ComparePokemonTypes(mainForm.);
+                int pokemonMasFuerte = PokemonServices.ComparePokemonTypes(((Pokemon)mainForm.cbPokemonCard1.SelectedValue), ((Pokemon)mainForm.cbPokemonCard2.SelectedValue));
+                if (pokemonMasFuerte == 2)
+                {
+                    mainForm.lIndicador.Text = "El pokemon " + mainForm.cbPokemonName2.Text + " és debil contra el pokemon " + mainForm.cbPokemonName1.Text;
+                    mainForm.pPokemon1.BackColor = Color.Green;
+                    mainForm.pPokemon2.BackColor = Color.Red;
+                } else if (pokemonMasFuerte == 1)
+                {
+                    mainForm.lIndicador.Text = "El pokemon " + mainForm.cbPokemonName1.Text + " és debil contra el pokemon " + mainForm.cbPokemonName2.Text;
+                    mainForm.pPokemon1.BackColor = Color.Red;
+                    mainForm.pPokemon2.BackColor = Color.Green;
+                } else
+                {
+                    mainForm.lIndicador.Text = "Ningun dels pokemon es debil contra l'altre";
+                    mainForm.pPokemon1.BackColor = Color.Yellow;
+                    mainForm.pPokemon2.BackColor = Color.Yellow;
+                }
             }
         }
 
         private async void CbPokemonName1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            mainForm.Cursor = Cursors.WaitCursor;
             await GetPokemonCard1();
+            mainForm.Cursor = Cursors.Default;
         }
 
         private async Task GetPokemonCard1()
@@ -71,17 +92,21 @@ namespace PokeApiFront.Controller
 
         private async void CbPokemonName2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            mainForm.Cursor = Cursors.WaitCursor;
             await GetPokemonCard2();
+            mainForm.Cursor = Cursors.Default;
         }
 
         private async Task GetPokemonCard2()
         {
             if (mainForm.cbPokemonName2.Text != "" && mainForm.cbPokemonName2.Text != null)
             {
+                Cursor.Current = Cursors.WaitCursor;
                 var result = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName2.Text);
                 mainForm.cbPokemonCard2.DataSource = result;
                 string imageUrl = result[0].images.small;
                 mainForm.pbPokemonCard2.ImageLocation = imageUrl;
+                Cursor.Current = Cursors.Default;
             }
         }
 

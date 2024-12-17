@@ -37,11 +37,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbPokemonCard2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pbPokemonCard1 = new System.Windows.Forms.PictureBox();
-            this.pbPokemonCard2 = new System.Windows.Forms.PictureBox();
             this.bComparar = new System.Windows.Forms.Button();
+            this.pbPokemonCard1 = new System.Windows.Forms.PictureBox();
+            this.pPokemon2 = new System.Windows.Forms.Panel();
+            this.pbPokemonCard2 = new System.Windows.Forms.PictureBox();
+            this.pPokemon1 = new System.Windows.Forms.Panel();
+            this.lIndicador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemonCard1)).BeginInit();
+            this.pPokemon2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemonCard2)).BeginInit();
+            this.pPokemon1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -120,33 +125,68 @@
             this.label4.Text = "Cartas del Pokemon:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbPokemonCard1
-            // 
-            this.pbPokemonCard1.BackColor = System.Drawing.Color.Transparent;
-            this.pbPokemonCard1.Location = new System.Drawing.Point(34, 147);
-            this.pbPokemonCard1.Name = "pbPokemonCard1";
-            this.pbPokemonCard1.Size = new System.Drawing.Size(266, 345);
-            this.pbPokemonCard1.TabIndex = 8;
-            this.pbPokemonCard1.TabStop = false;
-            // 
-            // pbPokemonCard2
-            // 
-            this.pbPokemonCard2.BackColor = System.Drawing.Color.Transparent;
-            this.pbPokemonCard2.Location = new System.Drawing.Point(632, 147);
-            this.pbPokemonCard2.Name = "pbPokemonCard2";
-            this.pbPokemonCard2.Size = new System.Drawing.Size(266, 345);
-            this.pbPokemonCard2.TabIndex = 9;
-            this.pbPokemonCard2.TabStop = false;
-            this.pbPokemonCard2.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // bComparar
             // 
-            this.bComparar.Location = new System.Drawing.Point(422, 55);
+            this.bComparar.Location = new System.Drawing.Point(419, 21);
             this.bComparar.Name = "bComparar";
             this.bComparar.Size = new System.Drawing.Size(97, 39);
             this.bComparar.TabIndex = 10;
             this.bComparar.Text = "Comparar Pokemons";
             this.bComparar.UseVisualStyleBackColor = true;
+            // 
+            // pbPokemonCard1
+            // 
+            this.pbPokemonCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbPokemonCard1.BackColor = System.Drawing.Color.Transparent;
+            this.pbPokemonCard1.Location = new System.Drawing.Point(20, 11);
+            this.pbPokemonCard1.Name = "pbPokemonCard1";
+            this.pbPokemonCard1.Size = new System.Drawing.Size(266, 345);
+            this.pbPokemonCard1.TabIndex = 14;
+            this.pbPokemonCard1.TabStop = false;
+            // 
+            // pPokemon2
+            // 
+            this.pPokemon2.BackColor = System.Drawing.Color.Transparent;
+            this.pPokemon2.Controls.Add(this.pbPokemonCard2);
+            this.pPokemon2.Location = new System.Drawing.Point(621, 129);
+            this.pPokemon2.Name = "pPokemon2";
+            this.pPokemon2.Size = new System.Drawing.Size(289, 363);
+            this.pPokemon2.TabIndex = 17;
+            // 
+            // pbPokemonCard2
+            // 
+            this.pbPokemonCard2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbPokemonCard2.BackColor = System.Drawing.Color.Transparent;
+            this.pbPokemonCard2.Location = new System.Drawing.Point(20, 10);
+            this.pbPokemonCard2.Name = "pbPokemonCard2";
+            this.pbPokemonCard2.Size = new System.Drawing.Size(266, 345);
+            this.pbPokemonCard2.TabIndex = 17;
+            this.pbPokemonCard2.TabStop = false;
+            // 
+            // pPokemon1
+            // 
+            this.pPokemon1.BackColor = System.Drawing.Color.Transparent;
+            this.pPokemon1.Controls.Add(this.pbPokemonCard1);
+            this.pPokemon1.Location = new System.Drawing.Point(28, 127);
+            this.pPokemon1.Name = "pPokemon1";
+            this.pPokemon1.Size = new System.Drawing.Size(289, 365);
+            this.pPokemon1.TabIndex = 18;
+            // 
+            // lIndicador
+            // 
+            this.lIndicador.BackColor = System.Drawing.Color.Transparent;
+            this.lIndicador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lIndicador.ForeColor = System.Drawing.Color.Violet;
+            this.lIndicador.Location = new System.Drawing.Point(345, 82);
+            this.lIndicador.Name = "lIndicador";
+            this.lIndicador.Size = new System.Drawing.Size(249, 40);
+            this.lIndicador.TabIndex = 19;
+            this.lIndicador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lIndicador.Click += new System.EventHandler(this.lIndicador_Click);
             // 
             // MainForm
             // 
@@ -155,9 +195,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(949, 553);
+            this.Controls.Add(this.lIndicador);
+            this.Controls.Add(this.pPokemon1);
+            this.Controls.Add(this.pPokemon2);
             this.Controls.Add(this.bComparar);
-            this.Controls.Add(this.pbPokemonCard2);
-            this.Controls.Add(this.pbPokemonCard1);
             this.Controls.Add(this.cbPokemonCard2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbPokemonCard1);
@@ -169,7 +210,9 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemonCard1)).EndInit();
+            this.pPokemon2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPokemonCard2)).EndInit();
+            this.pPokemon1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,8 +228,11 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.ComboBox cbPokemonCard2;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.PictureBox pbPokemonCard1;
-        public System.Windows.Forms.PictureBox pbPokemonCard2;
         public System.Windows.Forms.Button bComparar;
+        public System.Windows.Forms.PictureBox pbPokemonCard1;
+        public System.Windows.Forms.Panel pPokemon2;
+        public System.Windows.Forms.PictureBox pbPokemonCard2;
+        public System.Windows.Forms.Panel pPokemon1;
+        public System.Windows.Forms.Label lIndicador;
     }
 }

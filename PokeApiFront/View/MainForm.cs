@@ -21,5 +21,10 @@ namespace PokeApiFront.View
         {
 
         }
+
+        private void lIndicador_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
