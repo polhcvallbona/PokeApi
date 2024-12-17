@@ -31,13 +31,25 @@ namespace PokeApiFront.Controller
             mainForm.cbPokemonName1.SelectedIndexChanged += CbPokemonName1_SelectedIndexChanged;
             mainForm.cbPokemonName2.SelectedIndexChanged += CbPokemonName2_SelectedIndexChanged;
             mainForm.bComparar.Click += BComparar_Click;
+            mainForm.cbPokemonCard1.SelectedIndexChanged += CbPokemonCard1_SelectedIndexChanged;
+            mainForm.cbPokemonCard2.SelectedIndexChanged += CbPokemonCard2_SelectedIndexChanged;
+        }
+
+        private void CbPokemonCard2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mainForm.pbPokemonCard2.ImageLocation = ((Pokemon)mainForm.cbPokemonCard2.SelectedValue).images.small;
+        }
+
+        private void CbPokemonCard1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mainForm.pbPokemonCard1.ImageLocation = ((Pokemon)mainForm.cbPokemonCard1.SelectedValue).images.small;
         }
 
         private void BComparar_Click(object sender, EventArgs e)
         {
             if (mainForm.cbPokemonName1 != null && mainForm.cbPokemonName2 != null)
             {
-
+                //int pokemonMasFuerte = PokemonServices.ComparePokemonTypes(mainForm.);
             }
         }
 
