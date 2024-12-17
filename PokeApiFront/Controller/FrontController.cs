@@ -30,6 +30,15 @@ namespace PokeApiFront.Controller
             welcomeForm.bEntrar.Click += BEntrar_Click;
             mainForm.cbPokemonName1.SelectedIndexChanged += CbPokemonName1_SelectedIndexChanged;
             mainForm.cbPokemonName2.SelectedIndexChanged += CbPokemonName2_SelectedIndexChanged;
+            mainForm.bComparar.Click += BComparar_Click;
+        }
+
+        private void BComparar_Click(object sender, EventArgs e)
+        {
+            if (mainForm.cbPokemonName1 != null && mainForm.cbPokemonName2 != null)
+            {
+
+            }
         }
 
         private async void CbPokemonName1_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,14 +68,17 @@ namespace PokeApiFront.Controller
             {
                 var result = await PokemonRepository.GetAllPokemonsByName(mainForm.cbPokemonName2.Text);
                 mainForm.cbPokemonCard2.DataSource = result;
+                string imageUrl = result[0].images.small;
+                mainForm.pbPokemonCard2.ImageLocation = imageUrl;
             }
         }
 
         private void BEntrar_Click(object sender, EventArgs e)
         {
             welcomeForm.Hide();
-            mainForm.Show();
+            mainForm.ShowDialog();
             welcomeForm.Close();
+            Application.Exit();
         }
 
         private async void LoadData()
